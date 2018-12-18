@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	int choice;
+	printf("Enter the integer to be checked = ");
+	scanf("%d", &choice);
+	
+	int num_1=0;
+	int num_2=1;
+	int sum;
+	
+	while(sum<choice)
+	{
+		sum=num_1+num_2;
+		num_1=num_2;
+		num_2=sum;
+	}
+	
+	if(sum==choice)
+	printf("Fibonacci Number");
+	
+	else
+	printf("Not a Fibonacci Number");
+	
+getch();
+return 0;
+}

@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	int notes;
+	printf("Enter the number of notes that you have = ");
+	scanf("%d", &notes);
+	
+	int arr[notes];
+	
+	int rupees;
+	int count=0;
+	int i;
+	
+	printf("Enter the Denomination values = \n");
+	for(i=0;i<notes;i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	
+	int j;
+	int temp;
+	
+	for(i=0;i<notes;i++)
+	{
+		for(j=i+1;j<notes;j++)
+		{
+			if(arr[i]>arr[j])
+			{
+				temp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=temp;
+			}
+		}
+	}
+	
+	printf("Enter the money value = ");
+	scanf("%d", &rupees);
+	
+	printf("\n");
+
+	for(i=(notes-1);i>=0;i--)
+	{
+		while(rupees>=arr[i])
+		{
+			rupees=rupees-arr[i];
+			count=count+1;
+		}
+	printf("%d Rupees X %d = %d\n",arr[i],count,count*arr[i]);
+	count=0;
+	}
+	
+getch();
+return 0;
+}

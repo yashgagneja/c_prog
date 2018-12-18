@@ -1,0 +1,60 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	int num;
+	int count=0;
+	
+	printf("Enter the number = ");
+	scanf("%d", &num);
+	
+	int i;
+	int number=num;
+	
+	for(i=1;i<num/2;i++)
+	{
+		if(num%i==0)
+		count=count+1;
+	}
+	
+	int arr[count];
+	int j;
+	
+	for(i=1;i<num;i++)
+	{
+		if(num%i==0)
+		{
+			arr[j]=i;
+			j++;
+		}	
+	}	
+	
+	int product=1;
+	
+	int sum=0;
+	j=0;
+	int count_1=0;
+	
+	for(i=0;i<count;i++)
+	{
+		for(j=1;j<arr[i];j++)
+		{
+		if(arr[i]%j==0)
+		count_1=count_1+1;
+		}
+	if(count_1==1)
+	product=product*arr[i];
+	
+	count_1=0;
+	}
+	
+	if(product==number)
+	printf("Sphenic Number");
+	
+	else
+	printf("Not a Sphenic Number");
+	
+getch();
+return 0;
+}

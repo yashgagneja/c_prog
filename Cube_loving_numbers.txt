@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int test,num,count_1=0,count_2=0;
+	scanf("%d", &test);
+
+	int a,b,k;
+	int i,j=0;
+	int result[32767];
+	int arr[test];
+
+	for(i=0;i<test;i++)
+	scanf("%d", &arr[i]);
+
+	printf("\n");
+	
+	for(i=0;i<32767;i++)
+	result[i]=0;
+	
+	for(i=0;i<test;i++)
+	{
+		for(a=2;a<=sqrt(arr[i]);a++)
+		{
+			for(b=1;b<=arr[i]/2;b++)
+			{
+				result[j]=pow(a,3)*b;
+				
+				if(result[j]<=arr[i])
+				{
+				j=j+1;
+				
+				for(k=0;k<=j;k++)
+				{
+					if(result[j-1]==result[k])
+					count_1=count_1+1;
+					
+					else
+					count_1=count_1+0;
+				}
+				if(count_1==1)
+				count_2=count_2+1;
+				}
+			count_1=0;
+			}
+		}
+		printf("%d\n", count_2);
+		count_1=0;
+		count_2=0;
+		
+		for(int m=0;m<=j;m++)
+		result[m]=0;
+	}
+	
+return 0;
+}
