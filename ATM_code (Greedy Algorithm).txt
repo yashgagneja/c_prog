@@ -16,7 +16,7 @@ int main()
 	printf("Enter the Denomination values = \n");
 	for(i=0;i<notes;i++)
 	{
-		scanf("%d", &arr[i]);
+		scanf("%d", &arr[i]);	//taking inputs
 	}
 	
 	int j;
