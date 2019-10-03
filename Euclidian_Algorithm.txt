@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<conio.h>
-
+//This can be made more efficient by using modulo instead of subtraction -->
 int main()
 {
 	int num_1, num_2;
