@@ -16,14 +16,14 @@ void constXorarray(ll a[], ll n)
 int main() 
 { 
 	ll n;
-    cout << "ENTER THE NUMBER OF ELEMENTS IN ARRAY:\n";
+    cout << "Enter the number of elements in array:\n";
     cin >> n;
     ll arr[n];
-    cout << "ENTER THE ELEMENTS OF ARRAY:\n";
+    cout << "Enter the elements of the array:\n";
     for(ll i=0;i<n;i++)
     	cin >> arr[i]; 
     constXorarray(arr, n); 
-    cout << "REQUIRED ARRAY IS:\n";
+    cout << "Required array is:\n";
     for (ll i = 0; i < n; i++) 
         cout << arr[i] << " "; 
     return 0; 
