@@ -1,4 +1,4 @@
-// A Prog. to construct array of XORs of 
+// A Prog. to construct an array of XORs of 
 //all elements except given index elemenet
 #include<bits/stdc++.h>
 using namespace std;
