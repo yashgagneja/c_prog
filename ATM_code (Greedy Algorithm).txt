@@ -4,6 +4,7 @@
 int main()
 {
 	int notes;
+	//hello world
 	printf("Enter the number of notes that you have = ");
 	scanf("%d", &notes);
 	
